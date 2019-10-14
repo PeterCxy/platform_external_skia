@@ -4274,9 +4274,9 @@ void GrGLGpu::onFinishFlush(GrSurfaceProxy*, SkSurface::BackendSurfaceAccess acc
     if (insertedSemaphore) {
         GL_CALL(Flush());
     }
-    if (flags & kSyncCpu_GrFlushFlag) {
-        GL_CALL(Finish());
-    }
+    //if (flags & kSyncCpu_GrFlushFlag) {
+    //    GL_CALL(Finish());
+    //}
     // TODO: We should have GL actually wait until the GPU has finished work on the GPU.
     if (finishedProc) {
         finishedProc(finishedContext);
